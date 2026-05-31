@@ -1,0 +1,6 @@
+tx_date,msisdn_masked,operator,district,recharge_amount
+2026-05-01,8801XXXXXXX1,OperatorA,Dhaka,100
+2026-05-01,8801XXXXXXX2,OperatorB,Chattogram,50
+2026-05-02,8801XXXXXXX3,OperatorA,Dhaka,200
+2026-05-02,8801XXXXXXX4,OperatorC,Rajshahi,150
+2026-05-03,8801XXXXXXX5,OperatorA,Khulna,50

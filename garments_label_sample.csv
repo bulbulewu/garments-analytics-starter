@@ -1,0 +1,5 @@
+label_id,order_id,style_code,quantity,material,supplier,production_date,defect_flag
+LBL0001,ORD10001,ST-1001,120,Polyester,SUPP-A,2026-05-01,0
+LBL0002,ORD10002,ST-1002,100,Cotton,SUPP-B,2026-05-01,1
+LBL0003,ORD10003,ST-1001,150,Polyester,SUPP-A,2026-05-02,0
+LBL0004,ORD10005,ST-1004,200,Cotton,SUPP-C,2026-05-03,0

@@ -1,0 +1,14 @@
+Create a Google Sheet named Week1_Cleaning_Template with sheets: Raw_Data, Cleaned_Data, KPI_Dashboard, Pivots.
+
+In Raw_Data paste garments_production_sample.csv starting at A1.
+In Cleaned_Data use formulas:
+normalized date (A2): =DATEVALUE(Raw_Data!A2)
+defect_rate (new col): =IFERROR(IF(Raw_Data!G2=0,0,Raw_Data!H2/Raw_Data!G2),0)
+operator fill: =IF(Raw_Data!I2="","MISSING",Raw_Data!I2)
+duplicate helper (M2): =IF(COUNTIFS(Raw_Data!A:A,Raw_Data!A2,Raw_Data!B:B,Raw_Data!B2,Raw_Data!F:F,Raw_Data!F2)>1,"DUP","")
+KPI_Dashboard formulas:
+Total units (B2): =SUM(Cleaned_Data!G:G)
+Overall defect rate (B3): =IF(B2=0,0,SUM(Cleaned_Data!H:H)/B2)
+Avg units per shift (B4): =AVERAGEIFS(Cleaned_Data!G:G,Cleaned_Data!D:D,"Day")
+Top 5 styles: =QUERY(Cleaned_Data!A:L,"select K, sum(G) where K is not null group by K order by sum(G) desc limit 5",1) (replace K with the style_code column letter)
+Charts: Line chart of units by production_date; bar chart defect_rate by factory.
